@@ -33,6 +33,7 @@ public class LoginServlet extends HttpServlet{
 			httpsession.setAttribute("Student", student);
 			requestDispatcher = req.getRequestDispatcher("profile.jsp");
 			requestDispatcher.forward(req, resp);
+//			resp.sendRedirect("profile.jsp");
 		} else {
 			resp.getWriter().println("<h3 style='color:red'> Email and password combination didn't match </h3>");
 			requestDispatcher = req.getRequestDispatcher("Login.html");
